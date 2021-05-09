@@ -1,0 +1,21 @@
+<head>
+    <title>
+        Artık Yıl Hesaplayıcı
+    </title>
+</head>
+<script>
+    var year = parseInt(prompt("Enter a year"));
+    function is_leap(year) {
+        if (year % 4 != 0) {
+            alert("This is not a leap year");
+        } else if (year % 400 == 0) {
+            alert("This is a leap year");
+        } else if (year % 100 == 0) {
+            alert("This is not a leap year");
+        } else {
+            alert("This is a leap year")
+        }
+    }
+    is_leap(year);
+    document.write("Thanks for trying");
+</script>
