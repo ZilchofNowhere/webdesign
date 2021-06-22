@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>
+            People Counter
+        </title>
+        <link rel="icon" href="https://www.computerhope.com/jargon/p/plus.png"></link>
+        <style>
+            body{
+                background-color: deepskyblue;
+                font-family: 'Myriad Pro', sans-serif;
+            }
+            button{
+                font-family: 'Myriad Pro', sans-serif; 
+            }
+            h1{
+                margin-left: 420px;
+            }
+            #add{
+                margin-left: 320px;
+            }
+            h2{
+                margin-left: 290px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>The total of visitors so far is</h2>
+        <h1 id="count">0</h1>
+        <button id="add">Increment</button>
+        <button id="dec">Decrease</button>
+        <button id="reset">Reset Counter</button>
+        <script>
+            var i = 0;
+            var num = document.getElementById("count")
+            document.getElementById("add").onclick = function(){
+                i+=1
+                num.innerText = String(i)
+            }
+            document.getElementById("dec").onclick = function(){
+                if (i == 0){
+                    return
+                }else{
+                    i-=1
+                    num.innerText = String(i)
+                }
+            }
+            document.getElementById("reset").onclick = function(){
+                i = 0
+                num.innerText = String(i)
+            }
+        </script>
+    </body>
+</html>
