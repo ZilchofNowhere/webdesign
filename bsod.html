@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Error</title>
+        <style>
+            body {
+                background-color: #008cff;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                color: #fff;
+                font-weight: lighter;
+                padding-top: 20px;
+            }
+            .container {
+                margin: 0 auto;
+                max-width: 800px;
+            }
+            .sad-face {
+                font-size: 120px;
+                font-weight: normal;
+            }
+            .upper {
+                font-size: 30px;
+                padding-right: 100px;
+            }
+            #percentage {
+                font-size: 28px;
+            }
+            .qr-code {
+                float: left;
+                padding-left: 0;
+                padding-right: 10px;
+            }
+            .qr-code::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+            .lower {
+                font-size: 14px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="sad-face">:(</div>
+            <p class="upper">
+                Your PC ran into a problem and needs to restart. We're just collecting some error info, and then we'll restart for you.
+            </p>
+            <p id="percentage">
+            </p>
+            <div class="qr-code">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Totally_not_a_Rickroll_QR_code.png"
+                 alt="QR Code" width="120">
+            </div>
+            <p class="lower">
+                For more information about this issue and possible fixes, visit https://www.windows.com/stopcode
+                <br><br><br>
+                <span style="font-size: 12px;">
+                    If you call a support person, give them this info: <br>
+                    Stop code: CRITICAL_PROCESS_DIED
+                </span>
+            </p>
+        </div>
+        <script>
+            let pc = document.getElementById("percentage")
+            let i = 0
+            pc.innerText = `%${i} complete`
+            setInterval(() => {
+                pc.innerText = `%${i} complete`
+                if (i == 100){
+                    clearInterval()
+                } else {
+                    i += 20
+                }
+            }, 3000)
+        </script>
+    </body>
+</html>
