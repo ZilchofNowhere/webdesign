@@ -4,14 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-screen, initial-scale=1.0">
     <title>Main page</title>
+    <style>
+        html {
+          font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica', sans-serif;
+          margin: 20px;
+          margin-left: 40px;
+          background-color: lightblue;
+        }
+        h2 {
+          text-align: center;
+        }
+        .expl {
+          display: inline;
+          font-weight: 600;
+        }
+        a {
+          text-decoration: none;
+          color: black;
+        }
+        .site-list {
+          display: inline-block;
+          padding-left: auto;
+          padding-right: 25px;
+          padding-top: 15px;
+          border-radius: 4px;
+          background-color: deepskyblue;
+        }
+        footer {
+          position: fixed;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          text-align: center;
+        }
+        hr {
+          border: 1px solid black;
+        }
+    </style>
   </head>
   <body>
     <h2>
-      Welcome to the Web Design repository of ZilchofNowhere.
+      Welcome to the Web Design repository of <a href="https://github.com/zilchofnowhere">ZilchofNowhere!</a>
     </h2>
-    <p>Here you can find a couple of web pages made for <p style="text-decoration: dashed;">money</p> fun.</p>
-    <a href="/bsod.html">BSOD</a><br>
-    <a href="/people-counter.html">A counter - made to count people but can be used for anything.</a><br>
-    <a href="/artık yıl bulucu.html">A little web page made to calculate leap years, consisting of popups.</a><br>
+    <p class="expl">Here you can find a couple of web pages made for</p> <p class="expl" style="text-decoration-line: line-through;">money</p><p class="expl"> fun.</p>
+    <br><br>
+    <nav class="site-list">
+      <h3 style="text-decoration: underline; text-align: center; margin: -6px auto;">
+        Sites
+      </h3>
+      <ul>
+        <li>
+          <a href="/bsod.html" title="Blue Screen of Death (Windows 10 version)">BSOD</a><br>
+        </li>
+        <li>
+          <a href="/people-counter.html" title="A counter - made to count people but can be used for anything.">
+            Counter
+          </a><br>
+        </li>
+        <li>
+          <a href="/artık yıl bulucu.html" title="A little web page made to calculate leap years, consisting of popups.">
+            Leap year calculator
+          </a><br>
+        </li>
+      </ul>
+    </nav>
+    <footer>
+      <hr>
+      <p>
+        <sub>
+          <i style="text-decoration: underline;">zilchofnowhere.github.io/webdesign</i><sup style="font-size: 7pt;">TM</sup> is a personal site that hopes that it is simply enough to not be ripped off.
+          <br>
+          All rights reserved. © 2021
+        </sub>
+      </p>
+    </footer>
   </body>
 </html>
