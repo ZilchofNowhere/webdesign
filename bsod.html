@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Error</title>
         <style>
+            * {
+                cursor: none;
+            }
             body {
                 background-color: #008cff;
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -44,24 +47,32 @@
             .lower {
                 font-size: 14px;
             }
+            .unselectable {
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
         </style>
     </head>
     <body>
-        <div class="container">
-            <div class="sad-face">:(</div>
+        <div class="container unselectable">
+            <div class="sad-face unselectable">:(</div>
             <p class="upper">
                 Your PC ran into a problem and needs to restart. We're just collecting some error info, and then we'll restart for you.
             </p>
-            <p id="percentage">
+            <p id="percentage" class="unselectable">
             </p>
-            <div class="qr-code">
+            <div class="qr-code unselectable">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Totally_not_a_Rickroll_QR_code.png"
-                alt="QR Code" width="120">
+                alt="QR Code" width="120" class="unselectable">
             </div>
-            <p class="lower">
+            <p class="lower unselectable">
                 For more information about this issue and possible fixes, visit https://www.windows.com/stopcode
                 <br><br><br>
-                <span style="font-size: 12px;">
+                <span style="font-size: 12px;" class="unselectable">
                     If you call a support person, give them this info: <br>
                     Stop code: CRITICAL_PROCESS_DIED
                 </span>
